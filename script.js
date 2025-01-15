@@ -30,3 +30,33 @@ function scrollVertically(targetSection) {
 function myFunction() {
                 window.location.href="./index.html";
             }
+
+
+// Form contact js
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get form data
+    const name = document.getElementById('input-name').value;
+    const email = document.getElementById('input-email').value;
+    const subject = document.getElementById('input-subject').value || 'Portfolio Contact'; // Use default subject if not provided
+    const message = document.getElementById('input-message').value;
+
+    // Send data to Google Apps Script
+    fetch('https://script.google.com/macros/s/AKfycbya6tBHGkeqTwWy3ccE1YxtJEIIG1qBf_IVDFeKjIm-EF9B-l2aHq_d-VSEvO-1LGbl/exec', {
+        method: 'POST', // Ensure this is POST
+        body: JSON.stringify({ name, email, subject, message }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json()) // Parse the JSON response
+    .then(data => {
+        alert(data.message); // Show success message
+        document.getElementById('contact-form').reset(); // Clear the form
+    })
+    .catch(error => {
+        alert('Failed to send message. Please try again.');
+        console.error('Error:', error);
+    });
+});

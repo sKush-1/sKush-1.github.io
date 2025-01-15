@@ -42,7 +42,7 @@ document
     const message = document.getElementById("input-message").value;
 
     // Send data to Google Apps Script
-    fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbw9VIPAogIt7n5DT3PMp3psO1PTjJiiQV-P-VZ35pvgPLfC1DhC-_1xCQYK8lZy0RQg/exec", {
       redirect: "follow", // Follow redirects
       method: "POST", // Use POST method
       body: JSON.stringify({ name, email, subject, message }), // Send data as JSON string

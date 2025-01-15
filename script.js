@@ -32,7 +32,27 @@ function myFunction() {
             }
 
 
-// Form contact js
+// Function to send form data using JSONP
+function sendFormData(name, email, subject, message) {
+    const callback = 'handleResponse'; // Name of the callback function
+    const url = `https://script.google.com/macros/s/AKfycbya6tBHGkeqTwWy3ccE1YxtJEIIG1qBf_IVDFeKjIm-EF9B-l2aHq_d-VSEvO-1LGbl/exec?callback=${callback}&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&subject=${encodeURIComponent(subject)}&message=${encodeURIComponent(message)}`;
+
+    // Create a script element
+    const script = document.createElement('script');
+    script.src = url;
+    document.body.appendChild(script);
+
+    // Remove the script element after the request is complete
+    script.onload = () => document.body.removeChild(script);
+}
+
+// Callback function to handle the response
+function handleResponse(response) {
+    alert(response.message); // Show success message
+    document.getElementById('contact-form').reset(); // Clear the form
+}
+
+// Add event listener to the form
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
 
@@ -42,21 +62,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const subject = document.getElementById('input-subject').value || 'Portfolio Contact'; // Use default subject if not provided
     const message = document.getElementById('input-message').value;
 
-    // Send data to Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycbya6tBHGkeqTwWy3ccE1YxtJEIIG1qBf_IVDFeKjIm-EF9B-l2aHq_d-VSEvO-1LGbl/exec', {
-        method: 'POST', // Ensure this is POST
-        body: JSON.stringify({ name, email, subject, message }),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(response => response.json()) // Parse the JSON response
-    .then(data => {
-        alert(data.message); // Show success message
-        document.getElementById('contact-form').reset(); // Clear the form
-    })
-    .catch(error => {
-        alert('Failed to send message. Please try again.');
-        console.error('Error:', error);
-    });
+    // Send data using JSONP
+    sendFormData(name, email, subject, message);
 });

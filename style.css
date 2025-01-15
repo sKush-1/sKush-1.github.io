@@ -8,6 +8,48 @@ body::-webkit-scrollbar {
     display: none; 
 }
 
+/* skills % */
+/* New Percentage Classes */
+#my-image {
+    height: 12rem;
+    width: 12rem;
+    margin: auto;
+    margin-top: -25vh; /* Move the image further up */
+    margin-left: -20px; /* Move the image slightly to the left */
+    overflow: hidden; /* Ensure the image doesn't overflow the circle */
+    border-radius: 50%; /* Make the container circular */
+    border: 3px solid white; /* Add a border */
+    box-shadow: 1px 1px 10px 2px lightgrey; /* Add a shadow */
+    position: relative; /* Enable positioning adjustments */
+}
+
+#my-image img {
+    width: 100%; /* Ensure the image covers the width */
+    height: 100%; /* Ensure the image covers the height */
+    object-fit: cover; /* Ensure the image covers the entire circle without distortion */
+    transform: scale(1.2); /* Zoom in the image */
+    transform-origin: center center; /* Ensure the zoom is centered */
+}
+.seventy-percent {
+    height: inherit;
+    width: 70%;
+}
+
+.sixty-percent {
+    height: inherit;
+    width: 60%;
+}
+
+.seventy-five-percent {
+    height: inherit;
+    width: 75%;
+}
+
+.sixty-five-percent {
+    height: inherit;
+    width: 65%;
+}
+
 
 
 /* Body Header */

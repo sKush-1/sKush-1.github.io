@@ -1,440 +1,639 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <title>Sumit Kushwaha</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-</head>
-<body>
+    <head>
+        <title>Sumit Kushwaha</title>
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+            integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <header id="body-header">
+            <nav>
+                <div class="dropdown-menu text-right">
+                    <div class="bars">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="dropdown-list nav-menu">
+                        <ul class="no-list-style">
+                            <li>
+                                <a href="#"> Home </a>
+                            </li>
+                            <li>
+                                <a href="#about"> About </a>
+                            </li>
+                            <li>
+                                <a href="#skills"> Skills </a>
+                            </li>
+                            <li>
+                                <a href="#experience">Experience</a>
+                            </li>
+                            <li>
+                                <a href="#projects">Projects</a>
+                            </li>
+                            <li>
+                                <a href="#education">Education</a>
+                            </li>
 
-    <header id="body-header">
-        <nav>
-            
-            <div class = "dropdown-menu text-right">
-                <div class="bars">
-                    <i class="fas fa-bars"></i>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class ="dropdown-list nav-menu">
-                    <ul class = "no-list-style">
-                        <li >
-                            <a href="#"> Home </a>
+
+                <ul class="no-list-style horizontal-list text-center nav-menu">
+                    <li>
+                        <a href="#"> Home </a>
+                    </li>
+                    <li>
+                        <a href="#about"> About </a>
+                    </li>
+                    <li>
+                        <a href="#skills"> Skills </a>
+                    </li>
+                    <li>
+                        <a href="#experience">Experience</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#education">Education</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div id="name-social-container">
+                <div class="text-center">
+                    <h1 id="my-name">Sumit Kushwaha</h1>
+                </div>
+                <div>
+                    <ul
+                        class="no-list-style horizontal-list text-center social-icons"
+                    >
+                        <li>
+                            <a href="https://github.com/sKush-1">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.linkedin.com/in/sumit-kush/">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
                         </li>
                         <li>
-                            <a href="#about"> About </a>
+                            <a href="https://leetcode.com/u/sumit_321">
+                                <img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAACkUlEQVR4nK2VzU8TQRTA1wC7207bXUA0Rjujgpe2saTcoJ8RFYNH0aAmICqejCcvalL8OGDUA+EifgTtDsH04G6LHjz5F3DQKEGMHgydpcagaEiM2o7ZJku3rWm3ti95p3nz+72Z2ZllmCpjwMWwvT7722YHlz0edjyudn5FuN8DPnIcS7X07QFf6wbv6mKa/G7wQYcDC0tPhMXLdYGHQkxjwAPe6XCrhaUDAced+nXuAe91uIVn6dA+YbJunfd4wJIO53mW3j6zmRIM11QJXacvmcaa4AEPWDTCx0faqIpRPiX4fGmig/u/zt15uIVn6cWBllcEw6gqIUwk9EeXEAnNvYm72Gr4DX4PWDAe6PAB8YGxYCXm3K9itJ5fDZRpnGkwBe9xFcJP94nT/yokMztDREI/DNvVX5Ee9trmjfDRQ0KsXH06BrtVjL4QDNPLs+3OsvDBkH3MCD/X3zxTsSOGYbRDplNdTRULvbutq7pgqFd8wdQ5mrSuNbhzC5+JR5mCr+KZokSSCeXbXEKhJjKTTMgPiwWi3r23A6wXDyYVZdwkPJdJRV4rZmxqFfiMJhDsHL1yss1rHJRl2ZlU5EfJhBw3k4nE08GSPQrutW1crG43WJ2+IIi17HlJDB8UA6KDy+qSiBd8nhptFirNUzE8TGKoz5TkWFC8BKxcTqBluNOWnjjf4igDv6FfNO1OmJIc9TuiBRKvbeXmSKu9BC6hWxvvEUaZZYw6TQlykpD9arHk9f1dW7Wx1NQ2q4rhXSNcjaFTpuEbkqBwzSiZn9zxU8VwgWD43fCSZlMYnq0arsdgRBjb3sZnjwQEDVbwLyAY/qoJrkd61tmuSuieKsFPREK/CYYqkeCTlAR9ZgB/Ac7jlcKnc3teAAAAAElFTkSuQmCC"
+                                    alt="external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo"
+                                />
+                            </a>
                         </li>
                         <li>
-                            <a href="#skills"> Skills </a>
-                        </li>
-                        <li>
-                            <a href="#experience">Projects</a>
-                        </li>
-                        <li>
-                            <a href="#education">Education</a>
-                        </li>
-                       
-                        <li>
-                            <a href="#contact">Contact</a>
+                            <a
+                                href="https://stackoverflow.com/users/23767828/sumit-kushwaha"
+                            >
+                                <i class="fab fa-stack-overflow"></i>
+                            </a>
                         </li>
                     </ul>
-                    </div>
-
-             </div>   
-
-            <ul class="no-list-style horizontal-list text-center nav-menu">
-                <li>
-                    <a href="#"> Home </a>
-                </li>
-                <li>
-                    <a href="#about"> About </a>
-                </li>
-                <li>
-                    <a href="#skills"> Skills </a>
-                </li>
-                <li>
-                    <a href="#experience">Experience</a>
-                </li>
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-                <li>
-                    <a href="#portfolio">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-
-        </nav>
-
-        <div id="name-social-container">
-            <div class="text-center">
-                <h1 id="my-name">Sumit Kushwaha</h1>
-            </div>
-            <div>
-                <ul class="no-list-style horizontal-list text-center social-icons">
-                    <li>
-                        <a href="https://github.com/sKush-1">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://www.linkedin.com/in/sumit-kush/">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://leetcode.com/u/sumit_321">
-                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAACkUlEQVR4nK2VzU8TQRTA1wC7207bXUA0Rjujgpe2saTcoJ8RFYNH0aAmICqejCcvalL8OGDUA+EifgTtDsH04G6LHjz5F3DQKEGMHgydpcagaEiM2o7ZJku3rWm3ti95p3nz+72Z2ZllmCpjwMWwvT7722YHlz0edjyudn5FuN8DPnIcS7X07QFf6wbv6mKa/G7wQYcDC0tPhMXLdYGHQkxjwAPe6XCrhaUDAced+nXuAe91uIVn6dA+YbJunfd4wJIO53mW3j6zmRIM11QJXacvmcaa4AEPWDTCx0faqIpRPiX4fGmig/u/zt15uIVn6cWBllcEw6gqIUwk9EeXEAnNvYm72Gr4DX4PWDAe6PAB8YGxYCXm3K9itJ5fDZRpnGkwBe9xFcJP94nT/yokMztDREI/DNvVX5Ee9trmjfDRQ0KsXH06BrtVjL4QDNPLs+3OsvDBkH3MCD/X3zxTsSOGYbRDplNdTRULvbutq7pgqFd8wdQ5mrSuNbhzC5+JR5mCr+KZokSSCeXbXEKhJjKTTMgPiwWi3r23A6wXDyYVZdwkPJdJRV4rZmxqFfiMJhDsHL1yss1rHJRl2ZlU5EfJhBw3k4nE08GSPQrutW1crG43WJ2+IIi17HlJDB8UA6KDy+qSiBd8nhptFirNUzE8TGKoz5TkWFC8BKxcTqBluNOWnjjf4igDv6FfNO1OmJIc9TuiBRKvbeXmSKu9BC6hWxvvEUaZZYw6TQlykpD9arHk9f1dW7Wx1NQ2q4rhXSNcjaFTpuEbkqBwzSiZn9zxU8VwgWD43fCSZlMYnq0arsdgRBjb3sZnjwQEDVbwLyAY/qoJrkd61tmuSuieKsFPREK/CYYqkeCTlAR9ZgB/Ac7jlcKnc3teAAAAAElFTkSuQmCC" alt="external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://stackoverflow.com/users/23767828/sumit-kushwaha">
-                            <i class="fab fa-stack-overflow"></i>
-                        </a>
-                    </li>
-                   
-                    
-                    
-                </ul>
-
-            </div>
-
-        </div>
-
-    </header>
-    <main>
-
-        <section id="about">
-            <div id="my-image">
-                <!-- <img src="./images/sumit.png" alt="Sumit Kushwaha"> -->
-            </div>
-        
-            <div id="about-para">
-                <p>
-                    My name is Sumit Kushwaha. I am from Farrukhabad, Uttarpradesh. I have completed my B.Tech (CSE) from ITM Gwalior. I have been honing my skills in C++, HTML, CSS, Javascript, React.JS, Node.js, Express.js, MongoDB, GraphQL, Redis.
-                </p>
-            </div>
-        </section>
-
-
-
-        <section id="skills">
-            <h1 class="section-heading mb75px ">
-                <span>
-                    <i class="fas fa-chalkboard-teacher"></i>
-                </span>
-                <span> SKILLS </span>
-            </h1>
-        
-            <div id="skills-container" class="skills-display">
-                <!-- Existing Skills -->
-                <div class="skill-progress">
-                    <div class="fifty-percent mb-blue" data-bar-width="55">
-                        <div class="skill-name">
-                            <span> C++ </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-progress">
-                    <div class="eighty-five-percent mb-orange" data-bar-width="80" data-skill-percent="75">
-                        <div class="skill-name">
-                            <span> Javascript </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-progress">
-                    <div class="eighty-percent mb-light-purple" data-bar-width="85">
-                        <div class="skill-name">
-                            <span> React </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-progress">
-                    <div class="fifty-percent mb-teal" data-bar-width="80">
-                        <div class="skill-name">
-                            <span> Node </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-progress">
-                    <div class="fifty-percent mb-blue" data-bar-width="75">
-                        <div class="skill-name">
-                            <span> Express </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-progress">
-                    <div class="eighty-percent mb-orange" data-bar-width="60">
-                        <div class="skill-name">
-                            <span> MongoDB </span>
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- New Skills -->
-                <div class="skill-progress">
-                    <div class="seventy-percent mb-blue" data-bar-width="70">
-                        <div class="skill-name">
-                            <span> PostgreSQL </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-progress">
-                    <div class="sixty-percent mb-teal" data-bar-width="60">
-                        <div class="skill-name">
-                            <span> Prisma </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-progress">
-                    <div class="seventy-five-percent mb-light-purple" data-bar-width="75">
-                        <div class="skill-name">
-                            <span> GraphQL </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-progress">
-                    <div class="sixty-five-percent mb-orange" data-bar-width="65">
-                        <div class="skill-name">
-                            <span> AWS </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-progress">
-                    <div class="fifty-percent mb-blue" data-bar-width="50">
-                        <div class="skill-name">
-                            <span> CI/CD </span>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </section>
-        
-
-        <section id="experience">
-
-            <h1 class="section-heading mb75px">
-                <span>
-                    <i class="fas fa-briefcase"></i>
-                </span>
-                <span> Project Experience </span>
-            </h1>
-
-            <div class="timeline">
-
-                <div class="timeline-box">
-                    <div class="timeline-container">
-                        <div class="timeline-logo">
-                            <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000030_1550710829_ninjasicon.png" alt="Project Logo">
-                        </div>
-                        <a href="https://jpegcompressor.com/">
-                            <h3 class="experience-designation m0 m-blue">JPEG Compressor</h3>
-                        </a>
-                        <h4 class="experience-company-name">Node.js, Express, Sharp, Docker, MySQL</h4>
-                        <h5 class="experience-duration m0">Nov 2024</h5>
-                
-                        <p class="experience-description text-justify"> 
-                            • Built a JPEG Compressor application to compress images into multiple formats, optimizing for size and quality using <strong>Sharp</strong>. 
-                            <br>
-                            • &nbsp; Designed a <strong>Node.js</strong> and <strong>Express</strong> backend for efficient image processing and format conversion. 
-                            <br>
-                            • &nbsp; Developed a <strong>Contact Us</strong> form, integrated with <strong>MySQL</strong> for secure data storage and retrieval. 
-                            <br>
-                            • &nbsp; Containerized the application using <strong>Docker</strong> for seamless deployment and scalability.  
-                            <br>
-                            • &nbsp; The project resulted in a significant increase in website traffic and improved the website’s ranking to the 8th position on Google search results for related keywords.
-                        </p>
-                    </div>
-                </div>
-                
-                
-               <div class="timeline-box right">
-    <div class="timeline-container">
-        <div class="timeline-logo">
-            <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000030_1550710829_ninjasicon.png" alt="Project Logo">
-        </div>
-        <a href="https://github.com/sKush-1/Twitter-Video-Downloader">
-            <h3 class="experience-designation m0 m-blue">Twitter Video Downloader</h3>
-        </a>
-        <h4 class="experience-company-name">React + FastAPI</h4>
-        <h5 class="experience-duration m0">April 2024</h5>
-        <p class="experience-description text-justify">
-            • &nbsp; Developed a Twitter Video Downloader app using <strong>React</strong> for the frontend and <strong>FastAPI</strong> for the backend, enabling users to download videos from Twitter seamlessly.  
-            <br>
-            • &nbsp; Implemented efficient video URL parsing and download functionality using <strong>FastAPI</strong>, ensuring robust performance.  
-            <br>
-            • &nbsp; Created a responsive and intuitive user interface with <strong>React</strong> and <strong>Tailwind CSS</strong>, offering a smooth user experience across devices.  
-            <br>
-            • &nbsp; Integrated backend validation to handle incorrect or unsupported URLs, providing accurate error messages for users.  
-        </p>
-    </div>
-</div>
-
-
-<div class="timeline-box left">
-    <div class="timeline-container">
-        <div class="timeline-logo">
-            <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000030_1550710829_ninjasicon.png" alt="Project Logo">
-        </div>
-        <a href="https://github.com/sKush-1/chat-app.git">
-            <h3 class="experience-designation m0 m-blue">Chat Application</h3>
-        </a>
-        <h4 class="experience-company-name">MERN Stack</h4>
-        <h5 class="experience-duration m0">August 2024</h5>
-
-        <p class="experience-description text-justify">
-            • &nbsp; Developed a robust, full-stack <strong>Chat Application</strong> using the <strong>MERN Stack</strong> (MongoDB, Express.js, React.js, Node.js), enabling users to engage in seamless one-on-one conversations.  
-            <br>
-            • &nbsp; Implemented real-time messaging functionality with <strong>Socket.IO</strong>, ensuring efficient WebSocket communication for bidirectional data transfer.  
-            <br>
-            • &nbsp; Integrated secure user authentication and authorization using <strong>JWT</strong> and <strong>bcrypt</strong>, alongside client-side session management with cookies.  
-            <br>
-            • &nbsp; Designed an intuitive user interface with <strong>React</strong>, ensuring a responsive and engaging chat experience across devices.  
-        </p>
-    </div>
-</div>
-
-
-                <div id="timeline-divider">
-                    <div class="timeline-traveller">
-                        <div>
-                            <i class="fas fa-plane"></i>
-                        </div>
-                    </div>
+        </header>
+        <main>
+            <section id="about">
+                <div id="my-image">
+                    <img src="./images/sumit.jpg" alt="Sumit Kushwaha" />
                 </div>
 
-            </div>
-
-        </section>
-
-        <section id="education">
-
-            <h1 class="section-heading mb75px">
-                <span>
-                    <i class="fas fa-graduation-cap"></i>
-                </span>
-                <span> Education </span>
-            </h1>
-
-            <div class="timeline">
-
-                <div class="timeline-box left ">
-                    <div class="timeline-container">
-                        <div class="timeline-logo">
-                            <img src="./images/itm.png">
-                        </div>
-                        <h3 class="experience-designation  m0 m-blue"> Bachelor of Technology <br> computer science </h3>
-                        <h4 class="experience-company-name "> ITM Gwalior</h4>
-                        <h5 class="experience-duration m0"> 2020-2024 </h5>
-                    </div>
+                <div id="about-para">
+                    <p>
+                        My name is Sumit Kushwaha. I am from Farrukhabad,
+                        Uttarpradesh. I have completed my B.Tech (CSE) from ITM
+                        Gwalior. I have been honing my skills in C++, HTML, CSS,
+                        Javascript, React.JS, Node.js, Express.js, MongoDB,
+                        GraphQL, Redis.
+                    </p>
                 </div>
-                
-                <div class="timeline-box right ">
-                    <div class="timeline-container">
-                        <div class="timeline-logo">
-                            <img src="./images/blue-bell.jpg">
-                        </div>
-                        <h3 class="experience-designation  m0 m-blue"> Class 12 </h3>
-                        <h4 class="experience-company-name "> Blue Bell, Fatehgarh </h4>
-                        <h5 class="experience-duration m0"> 2020 </h5>
-                        
-                    </div>
-                </div>
+            </section>
 
-                <div class="timeline-box left ">
-                    <div class="timeline-container">
-                        <div class="timeline-logo">
-                            <img src="./images/blue-bell.jpg">
-                        </div>
-                        <h3 class="experience-designation  m0 m-blue"> Class 10 </h3>
-                        <h4 class="experience-company-name "> Blue Bell, Fatehgarh </h4>
-                        <h5 class="experience-duration m0"> 2018 </h5>
+            <section id="skills">
+                <h1 class="section-heading mb75px">
+                    <span>
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </span>
+                    <span> SKILLS </span>
+                </h1>
 
+                <div id="skills-container" class="skills-display">
+                    <!-- Existing Skills -->
+                    <div class="skill-progress">
+                        <div class="fifty-percent mb-blue" data-bar-width="55">
+                            <div class="skill-name">
+                                <span> C++ </span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                
-                <div id="timeline-divider">
-                    <div class="timeline-traveller">
-                        <div>
-                            <i class="fas fa-car-side"></i>
+                    <div class="skill-progress">
+                        <div
+                            class="eighty-five-percent mb-orange"
+                            data-bar-width="80"
+                            data-skill-percent="75"
+                        >
+                            <div class="skill-name">
+                                <span> Javascript </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div
+                            class="eighty-percent mb-light-purple"
+                            data-bar-width="85"
+                        >
+                            <div class="skill-name">
+                                <span> React </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="fifty-percent mb-teal" data-bar-width="80">
+                            <div class="skill-name">
+                                <span> Node </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="fifty-percent mb-blue" data-bar-width="75">
+                            <div class="skill-name">
+                                <span> Express </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div
+                            class="eighty-percent mb-orange"
+                            data-bar-width="60"
+                        >
+                            <div class="skill-name">
+                                <span> MongoDB </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- New Skills -->
+                    <div class="skill-progress">
+                        <div
+                            class="seventy-percent mb-blue"
+                            data-bar-width="70"
+                        >
+                            <div class="skill-name">
+                                <span> PostgreSQL </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="sixty-percent mb-teal" data-bar-width="60">
+                            <div class="skill-name">
+                                <span> Prisma </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div
+                            class="seventy-five-percent mb-light-purple"
+                            data-bar-width="75"
+                        >
+                            <div class="skill-name">
+                                <span> GraphQL </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div
+                            class="sixty-five-percent mb-orange"
+                            data-bar-width="65"
+                        >
+                            <div class="skill-name">
+                                <span> AWS </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="fifty-percent mb-blue" data-bar-width="50">
+                            <div class="skill-name">
+                                <span> CI/CD </span>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </section>
 
-            </div>
+            <section id="experience">
+                <h1 class="section-heading mb75px">
+                    <span>
+                        <i class="fas fa-briefcase"></i>
+                    </span>
+                    <span> Employment History </span>
+                </h1>
 
-        </section>
-
-        
-
-        <section id="contact">
-            <h1 class="section-heading mb50px">
-                <span>
-                    <i class="far fa-address-card"></i>
-                </span>
-                <span> Contact </span>
-            </h1>
-            <div id="contact-container">
-                <form id="contact-form">
-                    <input id="input-name" name="name" type="text" placeholder="Your Name" required>
-                    <input id="input-email" name="email" type="email" placeholder="Your Email" required>
-                    <input id="input-subject" name="subject" type="text" placeholder="Subject (Optional)">
-                    <textarea id="input-message" name="message" rows="2" cols="40" placeholder="Message" required></textarea>
-                    <button class="sub-btn" type="submit">SEND MESSAGE</button>
-                </form>
-                <div id="my-details-container">
-
-                    <h3> Get In touch </h3>
-                    <p> Contact at kushsumit27@gmail.com</p>
-
-                    <h3> My Address </h3>
-                    <div class="my-details-info-container">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>India</span>
+                <div class="timeline">
+                    <div class="timeline-box">
+                        <div class="timeline-container">
+                            <div class="timeline-logo">
+                                <img
+                                    src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000030_1550710829_ninjasicon.png"
+                                    alt="Company Logo"
+                                />
+                            </div>
+                            <h3 class="experience-designation m0 m-blue">
+                                Backend Developer
+                            </h3>
+                            <h4 class="experience-company-name">
+                                Srchout Software Solutions
+                            </h4>
+                            <h5 class="experience-duration m0">
+                                May 2025 - July 2025 | Gurugram
+                            </h5>
+                            <p class="experience-description text-justify">
+                                • Architected and optimized backend APIs for
+                                Autviton.com using <strong>Node.js</strong>,
+                                <strong>Express</strong>, and
+                                <strong>MySQL</strong>—reducing average response
+                                time by 40% through query optimization and
+                                asynchronous handling.
+                                <br />
+                                • Redesigned database schema and indexing
+                                strategy for vehicle listings, significantly
+                                improving performance under high user load.
+                                <br />
+                                • Enforced strict input validation and
+                                sanitization using <strong>Joi</strong>,
+                                eliminating invalid payloads and enhancing
+                                backend reliability.
+                            </p>
+                        </div>
                     </div>
-                    <div class="my-details-info-container">
-                        <i class="fas fa-mobile-alt"></i>
-                        <span>8303941540</span>
+
+                    <div class="timeline-box right">
+                        <div class="timeline-container">
+                            <div class="timeline-logo">
+                                <img
+                                    src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000030_1550710829_ninjasicon.png"
+                                    alt="Company Logo"
+                                />
+                            </div>
+                            <h3 class="experience-designation m0 m-blue">
+                                Backend Developer
+                            </h3>
+                            <h4 class="experience-company-name">
+                                Toolka Enterprise Software Solutions
+                            </h4>
+                            <h5 class="experience-duration m0">
+                                November 2024 - April 2025 | Hyderabad
+                            </h5>
+                            <p class="experience-description text-justify">
+                                • Engineered a JPEG Compressor using
+                                <strong>Node.js</strong> and
+                                <strong>Sharp</strong>, reducing image
+                                processing time by 40% and lowering CPU
+                                usage—resulting in faster web load times and
+                                improved user experience.
+                                <br />
+                                • Led end-to-end project development for
+                                multiple applications, coordinating design,
+                                coding, testing, and deployment processes.
+                            </p>
+                        </div>
                     </div>
-                    <div class="my-details-info-container">
-                        <i class="far fa-envelope"></i>
-                        <span>kushsumit27@gmail.com</span>
+
+                    <div id="timeline-divider">
+                        <div class="timeline-traveller">
+                            <div>
+                                <i class="fas fa-motorcycle"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="text-center social-icons">
+            <section id="projects">
+                <h1 class="section-heading mb75px">
+                    <span>
+                        <i class="fas fa-laptop-code"></i>
+                    </span>
+                    <span> Project Experience </span>
+                </h1>
 
-                <ul class="no-list-style horizontal-list text-center social-icons">
-                    <li>
-                        <a href="https://github.com/sKush-1">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </li>
+                <div class="timeline">
+                    <div class="timeline-box">
+                        <div class="timeline-container">
+                            <div class="timeline-logo">
+                                <img
+                                    src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000030_1550710829_ninjasicon.png"
+                                    alt="Project Logo"
+                                />
+                            </div>
+                            <a href="https://jpegcompressor.com/">
+                                <h3 class="experience-designation m0 m-blue">
+                                    JPEG Compressor
+                                </h3>
+                            </a>
+                            <h4 class="experience-company-name">
+                                Node.js, Express, Sharp, Docker, MySQL
+                            </h4>
+                            <h5 class="experience-duration m0">Nov 2024</h5>
 
-                    <li>
-                        <a href="https://www.linkedin.com/in/sumit-kush/">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://leetcode.com/u/sumit_321">
-                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAACkUlEQVR4nK2VzU8TQRTA1wC7207bXUA0Rjujgpe2saTcoJ8RFYNH0aAmICqejCcvalL8OGDUA+EifgTtDsH04G6LHjz5F3DQKEGMHgydpcagaEiM2o7ZJku3rWm3ti95p3nz+72Z2ZllmCpjwMWwvT7722YHlz0edjyudn5FuN8DPnIcS7X07QFf6wbv6mKa/G7wQYcDC0tPhMXLdYGHQkxjwAPe6XCrhaUDAced+nXuAe91uIVn6dA+YbJunfd4wJIO53mW3j6zmRIM11QJXacvmcaa4AEPWDTCx0faqIpRPiX4fGmig/u/zt15uIVn6cWBllcEw6gqIUwk9EeXEAnNvYm72Gr4DX4PWDAe6PAB8YGxYCXm3K9itJ5fDZRpnGkwBe9xFcJP94nT/yokMztDREI/DNvVX5Ee9trmjfDRQ0KsXH06BrtVjL4QDNPLs+3OsvDBkH3MCD/X3zxTsSOGYbRDplNdTRULvbutq7pgqFd8wdQ5mrSuNbhzC5+JR5mCr+KZokSSCeXbXEKhJjKTTMgPiwWi3r23A6wXDyYVZdwkPJdJRV4rZmxqFfiMJhDsHL1yss1rHJRl2ZlU5EfJhBw3k4nE08GSPQrutW1crG43WJ2+IIi17HlJDB8UA6KDy+qSiBd8nhptFirNUzE8TGKoz5TkWFC8BKxcTqBluNOWnjjf4igDv6FfNO1OmJIc9TuiBRKvbeXmSKu9BC6hWxvvEUaZZYw6TQlykpD9arHk9f1dW7Wx1NQ2q4rhXSNcjaFTpuEbkqBwzSiZn9zxU8VwgWD43fCSZlMYnq0arsdgRBjb3sZnjwQEDVbwLyAY/qoJrkd61tmuSuieKsFPREK/CYYqkeCTlAR9ZgB/Ac7jlcKnc3teAAAAAElFTkSuQmCC" alt="external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://stackoverflow.com/users/23767828/sumit-kushwaha">
-                            <i class="fab fa-stack-overflow"></i>
-                        </a>
-                    </li>
-                   
-                </ul>
-            </div>
-        </section>
+                            <p class="experience-description text-justify">
+                                • Built a JPEG Compressor application to
+                                compress images into multiple formats,
+                                optimizing for size and quality using
+                                <strong>Sharp</strong>.
+                                <br />
+                                • &nbsp; Designed a <strong>Node.js</strong> and
+                                <strong>Express</strong> backend for efficient
+                                image processing and format conversion.
+                                <br />
+                                • &nbsp; Developed a
+                                <strong>Contact Us</strong> form, integrated
+                                with <strong>MySQL</strong> for secure data
+                                storage and retrieval.
+                                <br />
+                                • &nbsp; Containerized the application using
+                                <strong>Docker</strong> for seamless deployment
+                                and scalability.
+                                <br />
+                                • &nbsp; The project resulted in a significant
+                                increase in website traffic and improved the
+                                website’s ranking to the 8th position on Google
+                                search results for related keywords.
+                            </p>
+                        </div>
+                    </div>
 
-    </main>
-    <script type="text/javascript" src="./script.js"></script>
-    <script type="text/javascript" src="./skillbar.js"></script>
-</body>
+                    <div class="timeline-box right">
+                        <div class="timeline-container">
+                            <div class="timeline-logo">
+                                <img
+                                    src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000030_1550710829_ninjasicon.png"
+                                    alt="Project Logo"
+                                />
+                            </div>
+                            <a
+                                href="https://github.com/sKush-1/Twitter-Video-Downloader"
+                            >
+                                <h3 class="experience-designation m0 m-blue">
+                                    Twitter Video Downloader
+                                </h3>
+                            </a>
+                            <h4 class="experience-company-name">
+                                React + FastAPI
+                            </h4>
+                            <h5 class="experience-duration m0">April 2024</h5>
+                            <p class="experience-description text-justify">
+                                • &nbsp; Developed a Twitter Video Downloader
+                                app using <strong>React</strong> for the
+                                frontend and <strong>FastAPI</strong> for the
+                                backend, enabling users to download videos from
+                                Twitter seamlessly.
+                                <br />
+                                • &nbsp; Implemented efficient video URL parsing
+                                and download functionality using
+                                <strong>FastAPI</strong>, ensuring robust
+                                performance.
+                                <br />
+                                • &nbsp; Created a responsive and intuitive user
+                                interface with <strong>React</strong> and
+                                <strong>Tailwind CSS</strong>, offering a smooth
+                                user experience across devices.
+                                <br />
+                                • &nbsp; Integrated backend validation to handle
+                                incorrect or unsupported URLs, providing
+                                accurate error messages for users.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-box left">
+                        <div class="timeline-container">
+                            <div class="timeline-logo">
+                                <img
+                                    src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000030_1550710829_ninjasicon.png"
+                                    alt="Project Logo"
+                                />
+                            </div>
+                            <a href="https://github.com/sKush-1/chat-app.git">
+                                <h3 class="experience-designation m0 m-blue">
+                                    Chat Application
+                                </h3>
+                            </a>
+                            <h4 class="experience-company-name">MERN Stack</h4>
+                            <h5 class="experience-duration m0">August 2024</h5>
+
+                            <p class="experience-description text-justify">
+                                • &nbsp; Developed a robust, full-stack
+                                <strong>Chat Application</strong> using the
+                                <strong>MERN Stack</strong> (MongoDB,
+                                Express.js, React.js, Node.js), enabling users
+                                to engage in seamless one-on-one conversations.
+                                <br />
+                                • &nbsp; Implemented real-time messaging
+                                functionality with <strong>Socket.IO</strong>,
+                                ensuring efficient WebSocket communication for
+                                bidirectional data transfer.
+                                <br />
+                                • &nbsp; Integrated secure user authentication
+                                and authorization using <strong>JWT</strong> and
+                                <strong>bcrypt</strong>, alongside client-side
+                                session management with cookies.
+                                <br />
+                                • &nbsp; Designed an intuitive user interface
+                                with <strong>React</strong>, ensuring a
+                                responsive and engaging chat experience across
+                                devices.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="timeline-divider">
+                        <div class="timeline-traveller">
+                            <div>
+                                <i class="fas fa-plane"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education">
+                <h1 class="section-heading mb75px">
+                    <span>
+                        <i class="fas fa-graduation-cap"></i>
+                    </span>
+                    <span> Education </span>
+                </h1>
+
+                <div class="timeline">
+                    <div class="timeline-box left">
+                        <div class="timeline-container">
+                            <div class="timeline-logo">
+                                <img src="./images/itm.png" />
+                            </div>
+                            <h3 class="experience-designation m0 m-blue">
+                                Bachelor of Technology <br />
+                                computer science
+                            </h3>
+                            <h4 class="experience-company-name">ITM Gwalior</h4>
+                            <h5 class="experience-duration m0">2020-2024</h5>
+                        </div>
+                    </div>
+
+                    <div class="timeline-box right">
+                        <div class="timeline-container">
+                            <div class="timeline-logo">
+                                <img src="./images/blue-bell.jpg" />
+                            </div>
+                            <h3 class="experience-designation m0 m-blue">
+                                Class 12
+                            </h3>
+                            <h4 class="experience-company-name">
+                                Blue Bell, Fatehgarh
+                            </h4>
+                            <h5 class="experience-duration m0">2020</h5>
+                        </div>
+                    </div>
+
+                    <div class="timeline-box left">
+                        <div class="timeline-container">
+                            <div class="timeline-logo">
+                                <img src="./images/blue-bell.jpg" />
+                            </div>
+                            <h3 class="experience-designation m0 m-blue">
+                                Class 10
+                            </h3>
+                            <h4 class="experience-company-name">
+                                Blue Bell, Fatehgarh
+                            </h4>
+                            <h5 class="experience-duration m0">2018</h5>
+                        </div>
+                    </div>
+
+                    <div id="timeline-divider">
+                        <div class="timeline-traveller">
+                            <div>
+                                <i class="fas fa-car-side"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h1 class="section-heading mb50px">
+                    <span>
+                        <i class="far fa-address-card"></i>
+                    </span>
+                    <span> Contact </span>
+                </h1>
+                <div id="contact-container">
+                    <form id="contact-form">
+                        <input
+                            id="input-name"
+                            name="name"
+                            type="text"
+                            placeholder="Your Name"
+                            required
+                        />
+                        <input
+                            id="input-email"
+                            name="email"
+                            type="email"
+                            placeholder="Your Email"
+                            required
+                        />
+                        <input
+                            id="input-subject"
+                            name="subject"
+                            type="text"
+                            placeholder="Subject (Optional)"
+                        />
+                        <textarea
+                            id="input-message"
+                            name="message"
+                            rows="2"
+                            cols="40"
+                            placeholder="Message"
+                            required
+                        ></textarea>
+                        <button class="sub-btn" type="submit">
+                            SEND MESSAGE
+                        </button>
+                    </form>
+                    <div id="my-details-container">
+                        <h3>Get In touch</h3>
+                        <p>Contact at kushsumit27@gmail.com</p>
+
+                        <h3>My Address</h3>
+                        <div class="my-details-info-container">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>India</span>
+                        </div>
+                        <div class="my-details-info-container">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>8303941540</span>
+                        </div>
+                        <div class="my-details-info-container">
+                            <i class="far fa-envelope"></i>
+                            <span>kushsumit27@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center social-icons">
+                    <ul
+                        class="no-list-style horizontal-list text-center social-icons"
+                    >
+                        <li>
+                            <a href="https://github.com/sKush-1">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.linkedin.com/in/sumit-kush/">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://leetcode.com/u/sumit_321">
+                                <img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAACkUlEQVR4nK2VzU8TQRTA1wC7207bXUA0Rjujgpe2saTcoJ8RFYNH0aAmICqejCcvalL8OGDUA+EifgTtDsH04G6LHjz5F3DQKEGMHgydpcagaEiM2o7ZJku3rWm3ti95p3nz+72Z2ZllmCpjwMWwvT7722YHlz0edjyudn5FuN8DPnIcS7X07QFf6wbv6mKa/G7wQYcDC0tPhMXLdYGHQkxjwAPe6XCrhaUDAced+nXuAe91uIVn6dA+YbJunfd4wJIO53mW3j6zmRIM11QJXacvmcaa4AEPWDTCx0faqIpRPiX4fGmig/u/zt15uIVn6cWBllcEw6gqIUwk9EeXEAnNvYm72Gr4DX4PWDAe6PAB8YGxYCXm3K9itJ5fDZRpnGkwBe9xFcJP94nT/yokMztDREI/DNvVX5Ee9trmjfDRQ0KsXH06BrtVjL4QDNPLs+3OsvDBkH3MCD/X3zxTsSOGYbRDplNdTRULvbutq7pgqFd8wdQ5mrSuNbhzC5+JR5mCr+KZokSSCeXbXEKhJjKTTMgPiwWi3r23A6wXDyYVZdwkPJdJRV4rZmxqFfiMJhDsHL1yss1rHJRl2ZlU5EfJhBw3k4nE08GSPQrutW1crG43WJ2+IIi17HlJDB8UA6KDy+qSiBd8nhptFirNUzE8TGKoz5TkWFC8BKxcTqBluNOWnjjf4igDv6FfNO1OmJIc9TuiBRKvbeXmSKu9BC6hWxvvEUaZZYw6TQlykpD9arHk9f1dW7Wx1NQ2q4rhXSNcjaFTpuEbkqBwzSiZn9zxU8VwgWD43fCSZlMYnq0arsdgRBjb3sZnjwQEDVbwLyAY/qoJrkd61tmuSuieKsFPREK/CYYqkeCTlAR9ZgB/Ac7jlcKnc3teAAAAAElFTkSuQmCC"
+                                    alt="external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo"
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://stackoverflow.com/users/23767828/sumit-kushwaha"
+                            >
+                                <i class="fab fa-stack-overflow"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <script type="text/javascript" src="./script.js"></script>
+        <script type="text/javascript" src="./skillbar.js"></script>
+    </body>
 </html>

@@ -345,28 +345,28 @@ section:nth-child(2n + 1) {
 }
 
 .experience-designation {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
 }
 
 .experience-company-name {
     margin: 5px 0 0;
     color: #eb822d;
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .experience-duration {
     color: #9e9b9b;
     font-weight: 100;
     color: grey;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .experience-description {
-    font-size: 14px;
+    font-size: 16px;
     padding: 2px;
     color: grey;
-    line-height: 20px;
+    line-height: 24px;
 }
 
 
